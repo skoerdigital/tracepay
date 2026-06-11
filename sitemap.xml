@@ -9,4 +9,10 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://tracepay.pl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tracepay.pl/"/>
   </url>
+  <url>
+    <loc>https://tracepay.pl/polityka-prywatnosci.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

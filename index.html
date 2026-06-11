@@ -31,7 +31,7 @@
 <meta name="twitter:image" content="https://tracepay.pl/og-image.png">
 
 <!-- Icons / PWA -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="%231f7a53"/><path d="M9 16.5l5 5L23 11" fill="none" stroke="%23fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/icon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -1138,7 +1138,7 @@ p { margin: 0; text-wrap: pretty; }
   font-weight: 600;
   width: fit-content;
 }
-.cta-note { position: relative; margin-top: 18px; font-size: 13.5px; color: rgba(255,255,255,0.6); }
+.cta-note { display: block; padding-top: 20px; margin-top: 28px; font-size: 13.5px; color: rgba(255,255,255,0.6); }
 
 /* ---------- footer ---------- */
 
@@ -1701,7 +1701,7 @@ footer {
 </section>
 
 <!-- ======================= CTA ======================= -->
-<section class="section" id="waitlist" data-screen-label="Lista oczekujących">
+<section class="section" id="waitlist" data-screen-label="Lista oczekujących" style="padding-top: 0;">
   <div class="wrap">
     <div class="cta-panel reveal">
       <h2>Dodaj do faktury link, dzięki któremu klient zapłaci sam</h2>
@@ -1717,7 +1717,7 @@ footer {
       </form>
       <div class="waitlist-ok" id="waitlist-ok">✓ Dziękujemy! Jesteś na liście — odezwiemy się wkrótce.</div>
       <div class="waitlist-err" id="waitlist-err" role="alert" style="display:none;margin-top:10px;color:var(--red);font:500 14px/1.5 var(--font-body)">Coś poszło nie tak. Spróbuj ponownie lub napisz na <a href="mailto:hej@tracepay.pl" style="color:var(--red);text-decoration:underline">hej@tracepay.pl</a>.</div>
-      <p class="cta-note">Zero spamu. Napiszemy tylko w sprawie wczesnego dostępu.</p>
+      <p class="cta-note">Zero spamu. Napiszemy tylko w sprawie wczesnego dostępu. Zapisując się, akceptujesz <a href="/polityka-prywatnosci.html" style="color:rgba(255,255,255,0.85);text-decoration:underline">politykę prywatności</a>.</p>
     </div>
   </div>
 </section>
@@ -1736,11 +1736,38 @@ footer {
       <a href="#jak-dziala">Jak działa</a>
       <a href="#cennik">Cennik</a>
       <a href="#faq">FAQ</a>
+      <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
     </div>
   </div>
 </footer>
 
-
+<!-- ======================= COOKIE CONSENT ======================= -->
+<style>
+.cookiebar{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:760px;margin:0 auto;
+  background:var(--dark,#121514);color:var(--dark-ink,#f2f4f2);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius,16px);box-shadow:0 12px 40px -12px rgba(0,0,0,.5);
+  padding:18px 20px;display:none;gap:16px;align-items:center;flex-wrap:wrap;
+  font:400 14px/1.5 var(--font-body,sans-serif)}
+.cookiebar.show{display:flex}
+.cookiebar p{margin:0;flex:1 1 320px;color:var(--dark-muted,#9aa49e)}
+.cookiebar p b{color:var(--dark-ink,#f2f4f2);font-weight:600}
+.cookiebar a{color:var(--dark-ink,#f2f4f2);text-decoration:underline}
+.cookiebar .cb-actions{display:flex;gap:10px;flex:0 0 auto}
+.cookiebar button{font:600 14px/1 var(--font-body,sans-serif);border-radius:999px;padding:11px 18px;
+  cursor:pointer;border:1px solid transparent;white-space:nowrap}
+.cookiebar .cb-accept{background:var(--accent,#1f7a53);color:#fff}
+.cookiebar .cb-reject{background:transparent;color:var(--dark-ink,#f2f4f2);border-color:rgba(255,255,255,.25)}
+@media (max-width:560px){.cookiebar .cb-actions{flex:1 1 100%}.cookiebar button{flex:1}}
+</style>
+<div class="cookiebar" id="cookiebar" role="dialog" aria-live="polite" aria-label="Zgoda na pliki cookie">
+  <p><b>Używamy plików cookie.</b> Niezbędne pliki sprawiają, że strona działa. Za Twoją zgodą
+  użyjemy też cookies analitycznych, by mierzyć ruch i ulepszać stronę. Szczegóły w
+  <a href="/polityka-prywatnosci.html">polityce prywatności</a>.</p>
+  <div class="cb-actions">
+    <button type="button" class="cb-reject" id="cb-reject">Tylko niezbędne</button>
+    <button type="button" class="cb-accept" id="cb-accept">Akceptuję wszystkie</button>
+  </div>
+</div>
 
 <!-- Tweaks panel (React) -->
 
@@ -1925,7 +1952,7 @@ footer {
           if (res && res.success) {
             form.style.display = "none";
             ok.style.display = "block";
-            if (typeof window.gtag === "function") {
+            if (window.tpConsent === "granted" && typeof window.gtag === "function") {
               window.gtag("event", "waitlist_signup", { method: "web3forms" });
             }
           } else {
@@ -1937,6 +1964,46 @@ footer {
           if (errEl) errEl.style.display = "block";
         });
     });
+  }
+
+  /* ---------- cookie consent (RODO) ---------- */
+  var CONSENT_KEY = "tp_consent";
+  var bar = document.getElementById("cookiebar");
+
+  function loadAnalytics() {
+    // Analityka uruchamia się TYLKO po zgodzie. Wklej tu inicjalizację GA4:
+    //   var GA_ID = "G-XXXXXXX";
+    //   var s = document.createElement("script"); s.async = true;
+    //   s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    //   document.head.appendChild(s);
+    //   window.dataLayer = window.dataLayer || [];
+    //   window.gtag = function(){ dataLayer.push(arguments); };
+    //   gtag("js", new Date()); gtag("config", GA_ID, { anonymize_ip: true });
+  }
+
+  function applyConsent(v) {
+    window.tpConsent = v; // "granted" | "denied"
+    if (v === "granted") loadAnalytics();
+  }
+
+  function setConsent(v) {
+    try { localStorage.setItem(CONSENT_KEY, v); } catch (e) {}
+    applyConsent(v);
+    if (bar) bar.classList.remove("show");
+  }
+
+  if (bar) {
+    var saved = null;
+    try { saved = localStorage.getItem(CONSENT_KEY); } catch (e) {}
+    if (saved === "granted" || saved === "denied") {
+      applyConsent(saved);
+    } else {
+      bar.classList.add("show");
+    }
+    var acc = document.getElementById("cb-accept");
+    var rej = document.getElementById("cb-reject");
+    if (acc) acc.addEventListener("click", function () { setConsent("granted"); });
+    if (rej) rej.addEventListener("click", function () { setConsent("denied"); });
   }
 })();
 

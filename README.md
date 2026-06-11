@@ -9,8 +9,10 @@ narzędziowego JS (React/Babel/edytor „Tweaks"), treść jest w czystym HTML
 
 | Plik | Rola |
 |------|------|
-| `index.html` | Cała strona (~73 KB): treść + inline CSS + ~6 KB vanilla JS. Bez zależności do zbudowania. |
+| `index.html` | Cała strona (~75 KB): treść + inline CSS + ~7 KB vanilla JS + baner cookies. Bez zależności do zbudowania. |
+| `polityka-prywatnosci.html` | Strona polityki prywatności (RODO). |
 | `og-image.png` | Social card 1200×630 (Open Graph / Twitter). |
+| `favicon.ico` | Favicon (16/32/48 px) dla starszych przeglądarek. |
 | `icon.svg` | Logo/favicon (wektorowe). |
 | `apple-touch-icon.png` · `icon-192.png` · `icon-512.png` | Ikony PWA / iOS. |
 | `site.webmanifest` | Manifest PWA. |
@@ -32,8 +34,20 @@ narzędziowego JS (React/Babel/edytor „Tweaks"), treść jest w czystym HTML
    ```
    (patrz sekcja GSC niżej). Jeśli weryfikujesz domenę przez DNS — możesz ten meta tag usunąć.
 
+3. **Dane firmy w polityce prywatności** — w `polityka-prywatnosci.html` uzupełnij sekcję
+   „Administrator danych": `[NAZWA FIRMY / IMIĘ I NAZWISKO]`, `[ADRES]`, `[NIP]` oraz
+   ewentualnie adres e-mail kontaktowy (domyślnie `hej@tracepay.pl`).
+
 > Domena w całym projekcie ustawiona na `https://tracepay.pl`. Jeśli się zmieni,
-> podmień `tracepay.pl` w `index.html` (canonical, og:url, hreflang), `sitemap.xml` i `robots.txt`.
+> podmień `tracepay.pl` w `index.html` (canonical, og:url, hreflang), `polityka-prywatnosci.html`,
+> `sitemap.xml` i `robots.txt`.
+
+### Cookies i analityka
+
+Strona ma baner zgody (RODO): domyślnie ładują się tylko niezbędne pliki. Analityka uruchamia się
+**dopiero po kliknięciu „Akceptuję wszystkie"**. Aby podłączyć GA4, odkomentuj i uzupełnij `GA_ID`
+w funkcji `loadAnalytics()` w inline-skrypcie `index.html` — reszta (zgoda + event `waitlist_signup`)
+zadziała automatycznie.
 
 ## Wdrożenie
 
