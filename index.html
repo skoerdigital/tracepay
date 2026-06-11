@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TracePay — faktury z KSeF zapłacone bez gonienia klientów</title>
+<meta name="description" content="TracePay wykrywa każdą fakturę wystawioną w KSeF i daje Twojemu klientowi prostą stronę, na której zapłaci, poprosi o więcej czasu, rozłoży płatność na raty lub zgłosi problem — zanim zaczniesz go gonić. Automatyczne przypomnienia o płatności, bez windykacji. Dołącz do listy oczekujących.">
+<link rel="canonical" href="https://tracepay.pl/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="TracePay">
+<meta name="theme-color" content="#1f7a53">
+<link rel="alternate" hreflang="pl" href="https://tracepay.pl/">
+<link rel="alternate" hreflang="x-default" href="https://tracepay.pl/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TracePay">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:url" content="https://tracepay.pl/">
+<meta property="og:title" content="TracePay — faktury z KSeF zapłacone bez gonienia klientów">
+<meta property="og:description" content="Automatyczna strona płatności do każdej faktury z KSeF: zapłać, odrocz, rozłóż na raty lub zgłoś problem. Przypomnienia bez windykacji. Dołącz do listy oczekujących.">
+<meta property="og:image" content="https://tracepay.pl/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TracePay — faktury z KSeF zapłacone bez gonienia klientów">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TracePay — faktury z KSeF zapłacone bez gonienia klientów">
+<meta name="twitter:description" content="Automatyczna strona płatności do każdej faktury z KSeF: zapłać, odrocz, rozłóż na raty lub zgłoś problem. Przypomnienia bez windykacji. Dołącz do listy oczekujących.">
+<meta name="twitter:image" content="https://tracepay.pl/og-image.png">
+
+<!-- Icons / PWA -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="%231f7a53"/><path d="M9 16.5l5 5L23 11" fill="none" stroke="%23fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>">
+<link rel="icon" type="image/svg+xml" href="/icon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Google Search Console: podmień content na token weryfikacyjny z GSC (metoda "Tag HTML") -->
+<meta name="google-site-verification" content="PODMIEN_NA_TOKEN_Z_GSC">
+
+<!-- Fonts: niblokujące renderowania -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "TracePay", "url": "https://tracepay.pl/", "logo": "https://tracepay.pl/icon.svg", "description": "Automatyczne strony płatności i przypomnienia do faktur wystawianych w KSeF.", "email": "hej@tracepay.pl", "areaServed": "PL"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TracePay", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "url": "https://tracepay.pl/", "description": "TracePay wykrywa każdą fakturę wystawioną w KSeF i daje Twojemu klientowi prostą stronę, na której zapłaci, poprosi o więcej czasu, rozłoży płatność na raty lub zgłosi problem — zanim zaczniesz go gonić. Automatyczne przypomnienia o płatności, bez windykacji. Dołącz do listy oczekujących.", "inLanguage": "pl-PL", "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "PLN", "description": "Strony płatności dla ograniczonej liczby faktur, podgląd faktur z KSeF."}, {"@type": "Offer", "name": "Solo", "price": "49", "priceCurrency": "PLN", "description": "Automatyczne przypomnienia, strony płatności bez limitu, branding w e-mailach."}, {"@type": "Offer", "name": "Business", "price": "99", "priceCurrency": "PLN", "description": "Pełna automatyzacja sekwencji, obietnice zapłaty i spory, raty i odroczenia przez partnera."}, {"@type": "Offer", "name": "Biuro", "price": "199", "priceCurrency": "PLN", "description": "Dla biur rachunkowych i agencji prowadzących wiele firm."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Czy TracePay to windykacja?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. TracePay działa przed windykacją — daje klientowi wygodne opcje rozwiązania płatności (zapłata, odroczenie, raty, zgłoszenie sporu), zanim sprawa stanie się zaległością do ściągnięcia. Eskalacja to zawsze Twoja świadoma decyzja, nie domyślny tryb."}}, {"@type": "Question", "name": "Czy pieniądze przechodzą przez TracePay?", "acceptedAnswer": {"@type": "Answer", "text": "Nigdy. Przelewy idą bezpośrednio na Twoje konto, płatności kartą i BLIK obsługuje Twój operator płatności, a raty — licencjonowany partner finansujący. My otrzymujemy wyłącznie statusy i metadane."}}, {"@type": "Question", "name": "Jak podłączę KSeF? Czy to skomplikowane?", "acceptedAnswer": {"@type": "Answer", "text": "Po rejestracji tworzysz profil firmy (dane możemy pobrać z GUS) i dodajesz certyfikat KSeF według instrukcji krok po kroku z ekranami. Certyfikat służy wyłącznie do odczytu Twoich faktur sprzedażowych. Cały proces zajmuje kilkanaście minut."}}, {"@type": "Question", "name": "Co jeśli faktura nie ma e-maila klienta albo numeru konta?", "acceptedAnswer": {"@type": "Answer", "text": "Taka faktura trafia do kolejki „Uzupełnij dane” — nic nie zostanie wysłane, dopóki dane nie będą kompletne. Uzupełniasz brakujące pole raz, a TracePay zapamiętuje je jako domyślne dla tego kontrahenta przy kolejnych fakturach."}}, {"@type": "Question", "name": "Czy mój klient musi zakładać konto?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Klient dostaje unikalny link do strony płatności konkretnej faktury — bez logowania, bez rejestracji, bez instalowania czegokolwiek. Wszystkie opcje ma dostępne od razu."}}, {"@type": "Question", "name": "Skąd biorą się raty i odroczenie płatności?", "acceptedAnswer": {"@type": "Answer", "text": "Finansowanie B2B realizuje licencjonowany partner. Klient składa wniosek u partnera, Ty otrzymujesz całość kwoty, a klient spłaca partnera w ratach. TracePay nie udziela finansowania i nie ocenia zdolności kredytowej."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "TracePay", "url": "https://tracepay.pl/", "inLanguage": "pl-PL"}</script>
+
+<style>
+/* cyrillic-ext */
+
+/* cyrillic */
+
+/* greek */
+
+/* vietnamese */
+
+
+
+
+
+/* cyrillic-ext */
+
+/* cyrillic */
+
+/* greek */
+
+/* vietnamese */
+
+
+
+
+
+/* cyrillic-ext */
+
+/* cyrillic */
+
+/* greek */
+
+/* vietnamese */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* vietnamese */
+
+
+
+
+
+/* vietnamese */
+
+
+
+
+
+/* vietnamese */
+
+
+
+
+
+/* vietnamese */
+
+
+
+
+
+
+/* ============================================================
+   TracePay — landing styles
+   Light neutral canvas, grotesque display type, single accent.
+   ============================================================ */
+
+:root {
+  --accent: #1f7a53;
+  --accent-ink: #ffffff;
+  --accent-soft: color-mix(in oklab, var(--accent) 10%, #ffffff);
+  --accent-line: color-mix(in oklab, var(--accent) 28%, #ffffff);
+
+  --bg: #f4f4f1;
+  --surface: #ffffff;
+  --surface-2: #fafaf8;
+  --ink: #16181a;
+  --muted: #686d72;
+  --faint: #9aa0a6;
+  --line: #e7e7e2;
+  --dark: #121514;
+  --dark-ink: #f2f4f2;
+  --dark-muted: #9aa49e;
+
+  --amber: #b97c1d;
+  --amber-soft: #f8efdd;
+  --red: #b4452f;
+  --red-soft: #f9e9e4;
+
+  --radius: 16px;
+  --radius-lg: 28px;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Schibsted Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --shadow-card: 0 1px 2px rgba(20, 22, 20, 0.05), 0 12px 32px -12px rgba(20, 22, 20, 0.14);
+  --shadow-float: 0 2px 6px rgba(20, 22, 20, 0.06), 0 24px 48px -16px rgba(20, 22, 20, 0.22);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; }
+
+a { color: inherit; }
+
+::selection { background: color-mix(in oklab, var(--accent) 22%, #ffffff); }
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- type ---------- */
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(44px, 5.6vw, 74px); }
+h2 { font-size: clamp(32px, 3.6vw, 48px); }
+h3 { font-size: 21px; letter-spacing: -0.015em; line-height: 1.25; }
+
+p { margin: 0; text-wrap: pretty; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.eyebrow::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 56ch;
+}
+
+.mono { font-family: var(--font-mono); }
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 14px 26px;
+  font: 600 16px/1 var(--font-body);
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 0 10px 24px -10px color-mix(in oklab, var(--accent) 70%, transparent);
+}
+.btn-primary:hover {
+  background: color-mix(in oklab, var(--accent) 88%, #000000);
+  box-shadow: 0 14px 28px -10px color-mix(in oklab, var(--accent) 80%, transparent);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn-ghost:hover { border-color: var(--ink); }
+
+.btn-dark {
+  background: var(--ink);
+  color: #ffffff;
+}
+.btn-dark:hover { background: #2a2e31; }
+
+.btn-sm { padding: 10px 18px; font-size: 14px; }
+
+/* ---------- nav ---------- */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 68px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 600 20px/1 var(--font-display);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+.logo-mark {
+  width: 28px; height: 28px;
+  border-radius: 9px;
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+.logo-mark svg { display: block; }
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  margin-left: 12px;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-links a:hover { color: var(--ink); background: rgba(0,0,0,0.045); }
+
+.nav-cta { margin-left: auto; display: flex; gap: 10px; }
+
+/* ---------- hero ---------- */
+
+.hero { padding: 28px 0 0; }
+
+.hero-panel {
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(40px, 6vw, 88px) clamp(28px, 5vw, 80px) clamp(40px, 5vw, 72px);
+  position: relative;
+  overflow: hidden;
+}
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(640px 420px at 86% 10%, color-mix(in oklab, var(--accent) 9%, transparent), transparent 70%),
+    radial-gradient(420px 320px at 70% 90%, color-mix(in oklab, var(--accent) 5%, transparent), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px;
+  margin-bottom: 26px;
+}
+.hero-badge .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 18%, transparent);
+}
+
+.hero h1 .accent { color: var(--accent); }
+
+.hero-sub {
+  margin-top: 24px;
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.hero-note {
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--faint);
+}
+
+/* hero mock stack */
+
+.hero-stage {
+  position: relative;
+  min-height: 480px;
+}
+
+.paycard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 4px);
+  box-shadow: var(--shadow-float);
+  overflow: hidden;
+}
+
+.hero-stage .paycard {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.paycard-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-2);
+}
+.brand-dot {
+  width: 30px; height: 30px;
+  border-radius: 9px;
+  background: #2c3640;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font: 600 11px/1 var(--font-display);
+  flex-shrink: 0;
+}
+.paycard-top .who { font-size: 14px; font-weight: 600; }
+.paycard-top .safe {
+  margin-left: auto;
+  font-size: 11.5px;
+  color: var(--faint);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.paycard-body { padding: 20px 18px 18px; }
+
+.inv-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.inv-num { font-size: 13.5px; color: var(--muted); }
+.inv-amount {
+  font: 600 30px/1.1 var(--font-display);
+  letter-spacing: -0.02em;
+}
+.inv-meta {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.chip {
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.chip-accent { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent); }
+.chip-amber { background: var(--amber-soft); border-color: #ecd9b3; color: var(--amber); }
+.chip-red { background: var(--red-soft); border-color: #eccdc3; color: var(--red); }
+
+.payopts {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+.payopt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 4px);
+  padding: 12px 14px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+.payopt:hover { border-color: var(--accent); background: var(--accent-soft); }
+.payopt.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.payopt .ico {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.payopt.active .ico, .payopt:hover .ico { color: var(--accent); border-color: var(--accent-line); background: #fff; }
+.payopt b { display: block; font-size: 14.5px; letter-spacing: -0.01em; }
+.payopt span { display: block; font-size: 12.5px; color: var(--muted); margin-top: 1px; }
+.payopt .arr { margin-left: auto; color: var(--faint); flex-shrink: 0; }
+
+/* floating chips on hero */
+
+.float {
+  position: absolute;
+  z-index: 3;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow-card);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.float small { display: block; font-weight: 500; color: var(--muted); font-size: 12px; }
+.float .st {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.st-paid { background: var(--accent-soft); color: var(--accent); }
+.st-promise { background: var(--amber-soft); color: var(--amber); }
+
+.float-paid { top: 8px; right: -6px; animation: drift 7s ease-in-out infinite; }
+.float-promise { bottom: 26px; left: -14px; animation: drift 8s ease-in-out 1s infinite; }
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-paid, .float-promise { animation: none; }
+}
+
+/* ---------- ICP strip ---------- */
+
+.icp {
+  padding: 44px 0 10px;
+  text-align: center;
+}
+.icp p { font-size: 13.5px; color: var(--faint); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+.icp-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 14px;
+  margin-top: 16px;
+  color: var(--muted);
+  font: 500 17px/1 var(--font-display);
+}
+.icp-list span { padding: 8px 16px; border: 1px dashed var(--line); border-radius: 999px; background: var(--surface); }
+
+/* ---------- sections ---------- */
+
+.section { padding: clamp(64px, 9vw, 120px) 0 0; }
+
+.sec-head { max-width: 720px; }
+.sec-head.center { margin: 0 auto; text-align: center; }
+.sec-head .eyebrow { margin-bottom: 16px; }
+.sec-head.center .eyebrow::before { display: none; }
+.sec-head h2 { margin-bottom: 16px; }
+
+/* problem cards */
+
+.cards-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.pcard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+}
+.pcard .glyph {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.pcard h3 { margin-bottom: 8px; }
+.pcard p { font-size: 15.5px; color: var(--muted); }
+
+/* ---------- how it works ---------- */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.step {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.step .num {
+  font: 600 13px/1 var(--font-mono);
+  color: var(--accent);
+}
+.step h3 { font-size: 18.5px; }
+.step p { font-size: 14.5px; color: var(--muted); flex-grow: 1; }
+.step .mini {
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.mini-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+.mini-row + .mini-row { border-top: 1px dashed var(--line); }
+.mini-row .ok { color: var(--accent); font-weight: 700; }
+.mini-row .miss { color: var(--amber); font-weight: 700; }
+.mini-row b { font-weight: 600; color: var(--ink); }
+.mini-bar {
+  height: 8px;
+  border-radius: 99px;
+  background: var(--line);
+  overflow: hidden;
+  margin-top: 6px;
+}
+.mini-bar i {
+  display: block;
+  height: 100%;
+  width: 72%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+
+/* ---------- demo ---------- */
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: 24px;
+  margin-top: 52px;
+  align-items: start;
+}
+
+.demo-hint {
+  text-align: center;
+  font-size: 14px;
+  color: var(--faint);
+  margin-top: 14px;
+}
+
+.resp {
+  margin-top: 14px;
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+  border-radius: calc(var(--radius) - 4px);
+  padding: 16px;
+  font-size: 14px;
+  display: none;
+}
+.resp.show { display: block; animation: pop 0.25s ease; }
+@keyframes pop {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.resp h4 { margin: 0 0 8px; font: 600 15px/1.3 var(--font-display); letter-spacing: -0.01em; }
+.resp p { color: var(--muted); font-size: 13.5px; }
+.resp .acct {
+  margin-top: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: 500 13px/1.6 var(--font-mono);
+}
+.resp .row-chips { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.resp .pick {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font: 600 13px/1 var(--font-body);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.resp .pick:hover, .resp .pick.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.resp textarea {
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: 400 14px/1.5 var(--font-body);
+  resize: vertical;
+  min-height: 64px;
+  background: #fff;
+}
+.resp .send { margin-top: 10px; }
+
+/* seller feed */
+
+.feed {
+  background: var(--dark);
+  color: var(--dark-ink);
+  border-radius: calc(var(--radius) + 4px);
+  padding: 24px;
+  position: sticky;
+  top: 92px;
+}
+.feed-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #262b28;
+}
+.feed-head .logo-mark { width: 24px; height: 24px; border-radius: 7px; }
+.feed-head b { font: 600 15px/1 var(--font-display); letter-spacing: -0.01em; }
+.feed-head span { margin-left: auto; font-size: 12px; color: var(--dark-muted); }
+
+.feed-list { display: flex; flex-direction: column; }
+.feed-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #1e2421;
+  font-size: 13.5px;
+}
+.feed-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.feed-item.new { animation: pop 0.3s ease; }
+.feed-item .t { color: var(--dark-muted); font: 500 11.5px/1.8 var(--font-mono); flex-shrink: 0; width: 44px; }
+.feed-item b { font-weight: 600; display: block; }
+.feed-item small { color: var(--dark-muted); font-size: 12.5px; }
+.feed-item .tag {
+  margin-left: auto;
+  align-self: flex-start;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  padding: 4px 9px;
+}
+.tag-ok { background: color-mix(in oklab, var(--accent) 26%, #121514); color: color-mix(in oklab, var(--accent) 60%, #ffffff); }
+.tag-warn { background: #322a17; color: #d9b15f; }
+.tag-info { background: #1e2a33; color: #82b4d6; }
+.tag-red { background: #33201b; color: #df8f78; }
+
+/* ---------- timeline ---------- */
+
+.timeline {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+.tl-col {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.tl-col > h3 { margin-bottom: 6px; }
+.tl-col > p { font-size: 14.5px; color: var(--muted); margin-bottom: 22px; }
+.tl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.tl::before {
+  content: "";
+  position: absolute;
+  left: 9px; top: 10px; bottom: 10px;
+  width: 2px;
+  background: var(--line);
+}
+.tl li {
+  position: relative;
+  padding: 0 0 18px 36px;
+  font-size: 14.5px;
+}
+.tl li:last-child { padding-bottom: 0; }
+.tl li::before {
+  content: "";
+  position: absolute;
+  left: 3px; top: 4px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 3px solid var(--faint);
+}
+.tl li.good::before { border-color: var(--accent); background: var(--accent-soft); }
+.tl li.warn::before { border-color: var(--amber); }
+.tl li.bad::before { border-color: var(--red); }
+.tl li b { display: block; font-weight: 600; }
+.tl li small { color: var(--muted); font-size: 13px; }
+.tl-note {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--faint);
+  border-top: 1px dashed var(--line);
+  padding-top: 14px;
+}
+
+/* ---------- regulatory (dark) ---------- */
+
+.reg-panel {
+  margin-top: 52px;
+  background: var(--dark);
+  color: var(--dark-ink);
+  border-radius: var(--radius-lg);
+  padding: clamp(36px, 5vw, 64px);
+  position: relative;
+  overflow: hidden;
+}
+.reg-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(560px 360px at 12% 0%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.reg-panel .eyebrow { color: color-mix(in oklab, var(--accent) 60%, #ffffff); }
+.reg-panel .eyebrow::before { background: currentColor; }
+.reg-panel h2 { color: #fff; max-width: 18ch; position: relative; }
+.reg-panel .sub { color: var(--dark-muted); margin-top: 16px; position: relative; }
+
+.reg-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 40px;
+}
+.reg-card {
+  background: #1a1f1c;
+  border: 1px solid #262d29;
+  border-radius: var(--radius);
+  padding: 24px 22px;
+}
+.reg-card .glyph {
+  width: 40px; height: 40px;
+  border-radius: 11px;
+  background: #232a26;
+  display: grid;
+  place-items: center;
+  color: color-mix(in oklab, var(--accent) 65%, #ffffff);
+  margin-bottom: 16px;
+}
+.reg-card h3 { color: #fff; font-size: 17.5px; margin-bottom: 8px; }
+.reg-card p { font-size: 14px; color: var(--dark-muted); }
+
+.reg-foot {
+  position: relative;
+  margin-top: 28px;
+  font-size: 14px;
+  color: var(--dark-muted);
+  border-top: 1px solid #232a26;
+  padding-top: 20px;
+  max-width: 72ch;
+}
+.reg-foot b { color: #fff; font-weight: 600; }
+
+/* ---------- comparison ---------- */
+
+.compare {
+  margin-top: 52px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.compare table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+.compare th, .compare td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.compare tr:last-child td { border-bottom: none; }
+.compare thead th {
+  font: 600 15px/1.3 var(--font-display);
+  letter-spacing: -0.01em;
+  background: var(--surface-2);
+}
+.compare td:first-child, .compare th:first-child {
+  color: var(--muted);
+  font-weight: 500;
+  width: 24%;
+}
+.compare .col-tp { background: var(--accent-soft); }
+.compare thead .col-tp { color: var(--accent); }
+.compare td.col-tp { font-weight: 600; }
+.compare td .neg { color: var(--faint); }
+
+/* ---------- pricing ---------- */
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 52px;
+  align-items: stretch;
+}
+.plan {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.plan .pname { font: 600 17px/1 var(--font-display); letter-spacing: -0.01em; }
+.plan .pdesc { font-size: 13.5px; color: var(--muted); margin-top: 8px; min-height: 40px; }
+.plan .price {
+  margin-top: 18px;
+  font: 600 38px/1 var(--font-display);
+  letter-spacing: -0.03em;
+}
+.plan .price small { font: 500 14px/1 var(--font-body); color: var(--muted); letter-spacing: 0; }
+.plan ul {
+  list-style: none;
+  margin: 22px 0 26px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--muted);
+  flex-grow: 1;
+}
+.plan ul li {
+  display: flex;
+  gap: 9px;
+  align-items: baseline;
+}
+.plan ul li::before {
+  content: "✓";
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.plan .btn { width: 100%; }
+
+.plan-featured {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: var(--dark-ink);
+  position: relative;
+  box-shadow: var(--shadow-float);
+}
+.plan-featured .pdesc, .plan-featured ul { color: var(--dark-muted); }
+.plan-featured .price small { color: var(--dark-muted); }
+.plan-featured ul li::before { color: color-mix(in oklab, var(--accent) 65%, #ffffff); }
+.plan-featured .ribbon {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+.plan-featured .btn-ghost { color: #fff; border-color: #3a423d; }
+.plan-featured .btn-ghost:hover { border-color: #fff; }
+
+.plans-note {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+  color: var(--faint);
+}
+
+/* ---------- FAQ ---------- */
+
+.faq {
+  margin-top: 52px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 10px;
+}
+.faq details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  font: 600 16.5px/1.3 var(--font-display);
+  letter-spacing: -0.01em;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary .plus {
+  margin-left: auto;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font: 400 16px/1 var(--font-body);
+  transition: transform 0.2s ease, background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+.faq details[open] summary .plus {
+  transform: rotate(45deg);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.faq .faq-body {
+  padding: 0 24px 22px;
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 64ch;
+}
+
+/* ---------- final CTA ---------- */
+
+.cta-panel {
+  margin-top: clamp(64px, 9vw, 120px);
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-radius: var(--radius-lg);
+  padding: clamp(44px, 6vw, 80px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(480px 300px at 18% 110%, rgba(255,255,255,0.16), transparent 70%),
+    radial-gradient(420px 280px at 85% -10%, rgba(0,0,0,0.18), transparent 70%);
+  pointer-events: none;
+}
+.cta-panel h2 { color: #fff; position: relative; margin: 0 auto 14px; max-width: 22ch; }
+.cta-panel p { position: relative; color: color-mix(in srgb, #ffffff 78%, transparent); max-width: 52ch; margin: 0 auto; }
+
+.waitlist {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.waitlist input {
+  width: min(360px, 100%);
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font: 500 16px/1 var(--font-body);
+  outline: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.waitlist input::placeholder { color: rgba(255,255,255,0.65); }
+.waitlist input:focus { background: rgba(255,255,255,0.2); border-color: #fff; }
+.waitlist .btn {
+  background: #fff;
+  color: var(--ink);
+}
+.waitlist .btn:hover { background: #f0f0ec; }
+.waitlist-ok {
+  position: relative;
+  display: none;
+  margin: 32px auto 0;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 999px;
+  padding: 13px 26px;
+  font-weight: 600;
+  width: fit-content;
+}
+.cta-note { position: relative; margin-top: 18px; font-size: 13.5px; color: rgba(255,255,255,0.6); }
+
+/* ---------- footer ---------- */
+
+footer {
+  margin-top: 40px;
+  padding: 36px 0 44px;
+  border-top: 1px solid var(--line);
+}
+.foot-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--muted);
+}
+.foot-inner .logo { font-size: 17px; }
+.foot-links { display: flex; gap: 18px; margin-left: auto; }
+.foot-links a { text-decoration: none; color: var(--muted); }
+.foot-links a:hover { color: var(--ink); }
+
+/* ---------- reveal ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.in { opacity: 1; transform: none; }
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1020px) {
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .plans { grid-template-columns: repeat(2, 1fr); }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-stage { min-height: 0; margin-top: 12px; }
+  .cards-3 { grid-template-columns: 1fr; }
+  .reg-grid { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr; }
+  .demo-grid { grid-template-columns: 1fr; }
+  .feed { position: static; }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .steps { grid-template-columns: 1fr; }
+  .plans { grid-template-columns: 1fr; }
+  .compare { overflow-x: auto; }
+  .compare table { min-width: 640px; }
+  .float-paid { right: 0; }
+  .float-promise { left: 0; }
+}
+</style>
+</head>
+<body>
+<!-- ======================= NAV ======================= -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#">
+      <span class="logo-mark"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5L5.5 11L12 3.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+      TracePay
+    </a>
+    <div class="nav-links">
+      <a href="#jak-dziala">Jak działa</a>
+      <a href="#demo">Demo</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="#waitlist">Dołącz do listy</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero" data-screen-label="Hero">
+  <div class="wrap">
+    <div class="hero-panel">
+      <div class="hero-grid">
+        <div>
+          <span class="hero-badge"><span class="dot"></span>Zintegrowane z KSeF — startuje z każdą fakturą</span>
+          <h1>Faktury zapłacone.<br>Relacje <span class="accent">nietknięte</span>.</h1>
+          <p class="hero-sub">TracePay wykrywa każdą fakturę, którą wystawiasz w&nbsp;KSeF, i&nbsp;daje Twojemu klientowi prostą stronę, na której może <strong>zapłacić, poprosić o&nbsp;więcej czasu, rozłożyć płatność na raty albo zgłosić problem</strong> — zanim zaczniesz go gonić.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#waitlist">Dołącz do listy oczekujących</a>
+            <a class="btn btn-ghost" href="#demo">Zobacz stronę płatności</a>
+          </div>
+          <p class="hero-note">Bez windykacji. Bez przelewów przez nasze konto. Bez instalacji u klienta.</p>
+        </div>
+
+        <div class="hero-stage">
+          <div class="paycard">
+            <div class="paycard-top">
+              <span class="brand-dot">SB</span>
+              <span class="who">Studio Brzoza sp. z o.o.</span>
+              <span class="safe"><svg width="11" height="13" viewBox="0 0 11 13" fill="none"><path d="M5.5 1L1 2.8v3.4c0 2.8 1.9 4.7 4.5 5.8C8.1 10.9 10 9 10 6.2V2.8L5.5 1z" stroke="currentColor" stroke-width="1.2"></path></svg>strona płatności</span>
+            </div>
+            <div class="paycard-body">
+              <div class="inv-row">
+                <div>
+                  <div class="inv-num">Faktura <b class="mono">FV 2026/06/118</b></div>
+                  <div class="inv-amount">12 300,00 zł</div>
+                </div>
+                <span class="chip chip-amber">termin: 24.06</span>
+              </div>
+              <div class="payopts">
+                <div class="payopt">
+                  <span class="ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.5 6.5h13" stroke="currentColor" stroke-width="1.4"></path></svg></span>
+                  <span><b>Zapłać teraz</b><span>przelew lub BLIK</span></span>
+                  <span class="arr">→</span>
+                </div>
+                <div class="payopt">
+                  <span class="ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"></circle><path d="M8 4.5V8l2.5 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span>
+                  <span><b>Potrzebuję więcej czasu</b><span>zadeklaruj termin zapłaty</span></span>
+                  <span class="arr">→</span>
+                </div>
+                <div class="payopt">
+                  <span class="ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 13V9M6 13V6M10 13V8M14 13V3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></span>
+                  <span><b>Rozłóż na raty</b><span>finansowanie przez partnera</span></span>
+                  <span class="arr">→</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="float float-paid">
+            <span class="st st-paid"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7.5L5.5 11L12 3.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+            <span>Zapłacono<small>FV 2026/05/092 · wysłano podziękowanie</small></span>
+          </div>
+          <div class="float float-promise">
+            <span class="st st-promise"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.6"></circle><path d="M8 4.5V8l2.5 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></span>
+            <span>Obietnica zapłaty<small>FV 2026/06/101 · do 27.06</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="icp reveal">
+      <p>Zbudowane dla firm, które same gonią swoje faktury</p>
+      <div class="icp-list">
+        <span>agencje marketingowe</span><span>software house'y</span><span>konsultanci</span><span>freelancerzy</span><span>małe biura projektowe</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ======================= PROBLEM ======================= -->
+<section class="section" id="problem" data-screen-label="Problem">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Problem</span>
+      <h2>Przypominajki nie dają opcji.<br>Windykacja psuje relacje.</h2>
+      <p class="sub" style="margin: 0 auto;">Nie chcesz kolejnego narzędzia do ściągania długów. Chcesz, żeby faktury były płacone na czas — bez niezręcznych telefonów i&nbsp;bez ryzyka utraty klienta.</p>
+    </div>
+    <div class="cards-3">
+      <div class="pcard reveal">
+        <span class="glyph"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 17c1-3.5 3.5-5 7-5s6 1.5 7 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><circle cx="10" cy="6.5" r="3.5" stroke="currentColor" stroke-width="1.5"></circle></svg></span>
+        <h3>Gonisz osobiście</h3>
+        <p>Wystawiasz 5–50 faktur miesięcznie i&nbsp;sam pilnujesz, kto zapłacił. Każde przypomnienie to Twój czas i&nbsp;Twoja niezręczna wiadomość.</p>
+      </div>
+      <div class="pcard reveal">
+        <span class="glyph"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h14v9H8l-4 3.5V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M7 8.5h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span>
+        <h3>Klient nie ma wyjścia</h3>
+        <p>Standardowe ponaglenie daje klientowi dwie opcje: zapłacić albo milczeć. Brak prostej drogi, żeby poprosić o&nbsp;czas, raty czy zgłosić błąd na fakturze.</p>
+      </div>
+      <div class="pcard reveal">
+        <span class="glyph"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l8 14H2L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M10 8v3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><circle cx="10" cy="14" r="0.9" fill="currentColor"></circle></svg></span>
+        <h3>Eskalacja za wcześnie</h3>
+        <p>Windykacja działa, ale często kosztuje Cię relację — a&nbsp;większość zaległości to nie zła wola, tylko brak wygodnego momentu i&nbsp;sposobu zapłaty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= JAK DZIAŁA ======================= -->
+<section class="section" id="jak-dziala" data-screen-label="Jak działa">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Jak to działa</span>
+      <h2>Od wystawienia w KSeF do zapłaty.<br>Automatycznie.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="num">01</span>
+        <h3>Połącz KSeF</h3>
+        <p>Dodajesz certyfikat KSeF według prostej instrukcji krok po kroku. TracePay tylko odczytuje Twoje faktury sprzedażowe — nic nie wystawia i&nbsp;nic nie zmienia.</p>
+        <div class="mini">
+          <div class="mini-row"><span class="ok">✓</span><b>Certyfikat aktywny</b></div>
+          <div class="mini-row">nasłuch nowych faktur<span style="margin-left:auto;" class="ok">●</span></div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="num">02</span>
+        <h3>Nowa faktura = start</h3>
+        <p>Każda nowa faktura jest sprawdzana: e-mail klienta, numer konta, termin, kwota. Braki trafiają do kolejki „Uzupełnij dane" — wypełniasz raz, zapamiętujemy per kontrahent.</p>
+        <div class="mini">
+          <div class="mini-row"><span class="ok">✓</span>kwota i termin</div>
+          <div class="mini-row"><span class="ok">✓</span>nr konta</div>
+          <div class="mini-row"><span class="miss">!</span>e-mail klienta — uzupełnij</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="num">03</span>
+        <h3>Klient dostaje stronę</h3>
+        <p>Do faktury powstaje unikalny link. Klient może zapłacić, zadeklarować termin, wziąć raty u&nbsp;partnera albo zgłosić problem — bez logowania i&nbsp;bez konta.</p>
+        <div class="mini">
+          <div class="mini-row"><b>tracepay.io/f/2026-118</b></div>
+          <div class="mini-bar"><i></i></div>
+          <div class="mini-row" style="border-top:none; padding-top:6px;">wysłano e-mailem w Twoim brandingu</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="num">04</span>
+        <h3>Ty widzisz statusy</h3>
+        <p>Przypomnienia idą same według sekwencji, którą ustawisz. Widzisz obietnice zapłaty, spory i&nbsp;chronicznych spóźnialskich. Eskalujesz tylko, gdy naprawdę trzeba.</p>
+        <div class="mini">
+          <div class="mini-row"><span class="ok">✓</span><b>zapłacono</b> — podziękowanie wysłane</div>
+          <div class="mini-row"><span class="miss">●</span>obietnica zapłaty: 27.06</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= DEMO ======================= -->
+<section class="section" id="demo" data-screen-label="Demo strony płatności">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Interaktywne demo</span>
+      <h2>To widzi Twój klient.<br>A to widzisz Ty.</h2>
+      <p class="sub" style="margin: 0 auto;">Kliknij dowolną opcję na stronie płatności po lewej — i&nbsp;zobacz, jaki status pojawia się u&nbsp;Ciebie w&nbsp;TracePay po prawej.</p>
+    </div>
+
+    <div class="demo-grid">
+      <!-- client-side payment page -->
+      <div>
+        <div class="paycard" id="demo-paycard">
+          <div class="paycard-top">
+            <span class="brand-dot">SB</span>
+            <span class="who">Studio Brzoza sp. z o.o.</span>
+            <span class="safe"><svg width="11" height="13" viewBox="0 0 11 13" fill="none"><path d="M5.5 1L1 2.8v3.4c0 2.8 1.9 4.7 4.5 5.8C8.1 10.9 10 9 10 6.2V2.8L5.5 1z" stroke="currentColor" stroke-width="1.2"></path></svg>strona płatności</span>
+          </div>
+          <div class="paycard-body">
+            <div class="inv-row">
+              <div>
+                <div class="inv-num">Faktura <b class="mono">FV 2026/06/118</b></div>
+                <div class="inv-amount">12 300,00 zł</div>
+              </div>
+              <div style="text-align:right;">
+                <span class="chip chip-amber">7 dni do terminu</span>
+              </div>
+            </div>
+            <div class="inv-meta">
+              <span class="chip">termin: 24.06.2026</span>
+              <span class="chip mono">KSeF: 5261040567-20260617-…</span>
+            </div>
+
+            <div class="payopts" id="demo-options">
+              <button class="payopt" type="button" data-opt="pay">
+                <span class="ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.5 6.5h13" stroke="currentColor" stroke-width="1.4"></path></svg></span>
+                <span><b>Zapłać teraz</b><span>przelew na konto sprzedawcy lub BLIK</span></span>
+                <span class="arr">→</span>
+              </button>
+              <button class="payopt" type="button" data-opt="promise">
+                <span class="ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"></circle><path d="M8 4.5V8l2.5 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span>
+                <span><b>Potrzebuję więcej czasu</b><span>zadeklaruj, kiedy zapłacisz</span></span>
+                <span class="arr">→</span>
+              </button>
+              <button class="payopt" type="button" data-opt="installments">
+                <span class="ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 13V9M6 13V6M10 13V8M14 13V3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></span>
+                <span><b>Rozłóż na raty</b><span>finansowanie przez licencjonowanego partnera</span></span>
+                <span class="arr">→</span>
+              </button>
+              <button class="payopt" type="button" data-opt="dispute">
+                <span class="ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 3h12v8H7l-4 3V3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path><path d="M5.5 6.5h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></span>
+                <span><b>Zgłoś problem z fakturą</b><span>opisz rozbieżność, zanim minie termin</span></span>
+                <span class="arr">→</span>
+              </button>
+            </div>
+
+            <div class="resp" id="resp-pay">
+              <h4>Dane do przelewu</h4>
+              <div class="acct">PKO BP · 02 1020 1026 0000 1602 0224 5187<br>tytuł: FV 2026/06/118</div>
+              <p style="margin-top:10px;">Przelew idzie <b>bezpośrednio na konto Studia Brzoza</b>. Status faktury zaktualizuje się po potwierdzeniu wpłaty.</p>
+            </div>
+
+            <div class="resp" id="resp-promise">
+              <h4>Kiedy planujesz zapłacić?</h4>
+              <div class="row-chips">
+                <button class="pick" type="button" data-days="3">za 3 dni</button>
+                <button class="pick" type="button" data-days="7">za 7 dni</button>
+                <button class="pick" type="button" data-days="14">własna data</button>
+              </div>
+              <p style="margin-top:10px;">Sprzedawca zobaczy Twoją deklarację. Przypomnienia wstrzymają się do zadeklarowanej daty.</p>
+            </div>
+
+            <div class="resp" id="resp-installments">
+              <h4>Raty przez partnera finansującego</h4>
+              <p>Np. <b class="mono">3 × 4 100 zł</b>. Wniosek i&nbsp;finansowanie obsługuje licencjonowany partner — sprzedawca otrzymuje całość, Ty spłacasz w&nbsp;ratach.</p>
+              <div class="row-chips"><button class="pick" type="button">Sprawdź ofertę partnera</button></div>
+            </div>
+
+            <div class="resp" id="resp-dispute">
+              <h4>Co się nie zgadza?</h4>
+              <textarea placeholder="np. kwota niezgodna z umową — ustaliliśmy 11 500 zł netto"></textarea>
+              <div class="row-chips"><button class="pick send" type="button">Wyślij do sprzedawcy</button></div>
+            </div>
+          </div>
+        </div>
+        <p class="demo-hint">▲ unikalna strona tworzona automatycznie dla każdej faktury z KSeF</p>
+      </div>
+
+      <!-- seller-side feed -->
+      <div class="feed" id="demo-feed">
+        <div class="feed-head">
+          <span class="logo-mark"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7.5L5.5 11L12 3.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          <b>TracePay — widok sprzedawcy</b>
+          <span>FV 2026/06/118</span>
+        </div>
+        <div class="feed-list" id="feed-list">
+          <div class="feed-item">
+            <span class="t">17.06</span>
+            <span><b>Wykryto fakturę w KSeF</b><small>dane kompletne — proces uruchomiony</small></span>
+            <span class="tag tag-info">AUTO</span>
+          </div>
+          <div class="feed-item">
+            <span class="t">17.06</span>
+            <span><b>Wysłano stronę płatności</b><small>e-mail do klienta w Twoim brandingu</small></span>
+            <span class="tag tag-info">AUTO</span>
+          </div>
+          <div class="feed-item" id="feed-placeholder">
+            <span class="t">—</span>
+            <span><b>Czekamy na reakcję klienta…</b><small>kliknij opcję na stronie po lewej</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SEKWENCJA ======================= -->
+<section class="section" id="sekwencja" data-screen-label="Sekwencja przypomnień">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Autopilot terminów</span>
+      <h2>Sekwencja, która pilnuje terminu za Ciebie</h2>
+      <p class="sub" style="margin: 0 auto;">Uprzejma z założenia, stanowcza dopiero wtedy, gdy trzeba. Każdy krok możesz dostosować lub wyłączyć — także per kontrahent.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-col reveal">
+        <h3>Do terminu płatności</h3>
+        <p>Klient wie o fakturze od pierwszego dnia — bez Twojego udziału.</p>
+        <ul class="tl">
+          <li class="good"><b>Dzień wystawienia</b><small>klient dostaje informację o nowej fakturze i&nbsp;link do strony płatności</small></li>
+          <li><b>1 dzień przed terminem</b><small>przypomnienie — jeśli faktura wciąż nieopłacona</small></li>
+          <li><b>Dzień terminu</b><small>przypomnienie z wyróżnioną opcją „potrzebuję więcej czasu"</small></li>
+          <li class="good"><b>Zapłacono → podziękowanie</b><small>dbasz o relację także wtedy, gdy wszystko poszło dobrze</small></li>
+        </ul>
+      </div>
+      <div class="tl-col reveal">
+        <h3>Po terminie</h3>
+        <p>Stopniowa eskalacja zamiast natychmiastowej windykacji.</p>
+        <ul class="tl">
+          <li class="warn"><b>Po terminie</b><small>uprzejme przypomnienie z prośbą o deklarację daty zapłaty</small></li>
+          <li class="warn"><b>+3–7 dni</b><small>kolejne przypomnienie — wciąż z opcjami rat i&nbsp;odroczenia</small></li>
+          <li class="warn"><b>+7–14 dni</b><small>ponowne przypomnienie, wyraźniejszy ton</small></li>
+          <li class="bad"><b>Powyżej 14 dni</b><small>eskalacja z ostrzeżeniem — decyzję podejmujesz Ty</small></li>
+          <li class="bad"><b>Spór</b><small>jeśli klient zgłosił problem, sekwencja się zatrzymuje do wyjaśnienia</small></li>
+        </ul>
+        <p class="tl-note">TracePay nie wysyła nic, czego byś nie zaakceptował — szablony i&nbsp;tempo ustawiasz raz, w&nbsp;swoim brandingu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= GRANICA REGULACYJNA ======================= -->
+<section class="section" id="bezpieczenstwo" data-screen-label="Granica regulacyjna">
+  <div class="wrap">
+    <div class="reg-panel reveal">
+      <span class="eyebrow">Architektura zaufania</span>
+      <h2 style="margin-top: 14px;">Pieniądze nigdy nie przechodzą przez TracePay</h2>
+      <p class="sub">Nie jesteśmy instytucją płatniczą, pożyczkodawcą ani pośrednikiem w&nbsp;transakcji. Widzimy wyłącznie statusy i&nbsp;metadane — środki płyną zawsze bezpośrednio do Ciebie.</p>
+      <div class="reg-grid">
+        <div class="reg-card">
+          <span class="glyph"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 7h14M4 7v6M9 7v6M14 7v6M2 13h14M9 2L2 7h14L9 2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path></svg></span>
+          <h3>Przelew</h3>
+          <p>Trafia bezpośrednio na Twoje konto bankowe — to, które jest na fakturze. Zero pośredników.</p>
+        </div>
+        <div class="reg-card">
+          <span class="glyph"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1.5" y="4" width="15" height="10" rx="2" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.5 7.5h15" stroke="currentColor" stroke-width="1.4"></path></svg></span>
+          <h3>Karta i BLIK</h3>
+          <p>Obsługuje Twój własny operator płatności, podpięty do Twojego konta. My tylko pokazujemy przycisk.</p>
+        </div>
+        <div class="reg-card">
+          <span class="glyph"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 14V9M6.5 14V5M11 14V7.5M15.5 14V3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></span>
+          <h3>Raty i odroczenie</h3>
+          <p>Realizuje licencjonowany partner finansujący. Ty dostajesz całość od razu, klient spłaca partnera.</p>
+        </div>
+      </div>
+      <p class="reg-foot"><b>Co to oznacza w praktyce:</b> nie przechowujemy środków, nie agregujemy płatności, nie wypłacamy pieniędzy i&nbsp;nie finansujemy faktur. Dzięki temu Twoje rozliczenia pozostają w&nbsp;pełni pod Twoją kontrolą.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PORÓWNANIE ======================= -->
+<section class="section" id="porownanie" data-screen-label="Porównanie">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Pozycjonowanie</span>
+      <h2>To nie jest kolejna przypominajka</h2>
+      <p class="sub" style="margin: 0 auto;">TracePay zagospodarowuje moment <em>przed</em> windykacją — wtedy, gdy większość zaległości da się jeszcze rozwiązać polubownie.</p>
+    </div>
+    <div class="compare reveal">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="col-tp">TracePay</th>
+            <th>Przypominajki</th>
+            <th>Windykacja</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Źródło faktur</td>
+            <td class="col-tp">KSeF — automatycznie, od momentu wystawienia</td>
+            <td>ręczny import / PDF</td>
+            <td>przekazanie sprawy po fakcie</td>
+          </tr>
+          <tr>
+            <td>Co dostaje klient</td>
+            <td class="col-tp">stronę z opcjami: zapłać, odrocz, raty, zgłoś problem</td>
+            <td>e-mail z ponagleniem</td>
+            <td>wezwanie do zapłaty</td>
+          </tr>
+          <tr>
+            <td>Raty i odroczenie</td>
+            <td class="col-tp">tak — przez licencjonowanego partnera</td>
+            <td><span class="neg">brak</span></td>
+            <td><span class="neg">brak</span></td>
+          </tr>
+          <tr>
+            <td>Ton komunikacji</td>
+            <td class="col-tp">partnerski, w Twoim brandingu, stopniowa eskalacja</td>
+            <td>neutralny szablon</td>
+            <td>konfrontacyjny</td>
+          </tr>
+          <tr>
+            <td>Relacja z klientem</td>
+            <td class="col-tp">chroniona — łącznie z podziękowaniem po zapłacie</td>
+            <td>obojętna</td>
+            <td>często stracona</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CENNIK ======================= -->
+<section class="section" id="cennik" data-screen-label="Cennik">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Cennik</span>
+      <h2>Zaczynasz za darmo.<br>Płacisz, gdy oszczędzamy Twój czas.</h2>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <span class="pname">Free</span>
+        <p class="pdesc">Sprawdź, jak działa strona płatności na własnych fakturach.</p>
+        <div class="price">0 zł <small>/ mies.</small></div>
+        <ul>
+          <li>strony płatności dla ograniczonej liczby faktur</li>
+          <li>ręczne oznaczanie statusów</li>
+          <li>podgląd faktur z KSeF</li>
+        </ul>
+        <a class="btn btn-ghost" href="#waitlist">Dołącz do listy</a>
+      </div>
+      <div class="plan reveal">
+        <span class="pname">Solo</span>
+        <p class="pdesc">Dla freelancerów i JDG, którzy chcą przestać pamiętać o terminach.</p>
+        <div class="price">49 zł <small>/ mies.</small></div>
+        <ul>
+          <li>wszystko z Free</li>
+          <li>automatyczne przypomnienia</li>
+          <li>strony płatności bez limitu</li>
+          <li>Twój branding w e-mailach</li>
+        </ul>
+        <a class="btn btn-ghost" href="#waitlist">Dołącz do listy</a>
+      </div>
+      <div class="plan plan-featured reveal">
+        <span class="ribbon">Najczęstszy wybór</span>
+        <span class="pname">Business</span>
+        <p class="pdesc">Dla firm wystawiających 5–50 faktur miesięcznie.</p>
+        <div class="price">99 zł <small>/ mies.</small></div>
+        <ul>
+          <li>wszystko z Solo</li>
+          <li>pełna automatyzacja sekwencji</li>
+          <li>obietnice zapłaty i spory</li>
+          <li>historia płatności klientów</li>
+          <li>raty i odroczenia przez partnera</li>
+        </ul>
+        <a class="btn btn-primary" href="#waitlist">Dołącz do listy</a>
+      </div>
+      <div class="plan reveal">
+        <span class="pname">Biuro</span>
+        <p class="pdesc">Dla biur rachunkowych i agencji prowadzących wiele firm.</p>
+        <div class="price">od 199 zł <small>/ mies.</small></div>
+        <ul>
+          <li>wszystko z Business</li>
+          <li>wiele firm na jednym koncie</li>
+          <li>portfele klientów</li>
+          <li>eksport historii działań</li>
+        </ul>
+        <a class="btn btn-ghost" href="#waitlist">Porozmawiajmy</a>
+      </div>
+    </div>
+    <p class="plans-note">Ceny netto. Produkt w fazie wczesnego dostępu — osoby z listy oczekujących otrzymają warunki założycielskie.</p>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="section" id="faq" data-screen-label="FAQ">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Częste pytania</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Czy TracePay to windykacja?<span class="plus">+</span></summary>
+        <div class="faq-body">Nie. TracePay działa <em>przed</em> windykacją — daje klientowi wygodne opcje rozwiązania płatności (zapłata, odroczenie, raty, zgłoszenie sporu), zanim sprawa w ogóle stanie się „zaległością do ściągnięcia". Eskalacja to zawsze Twoja świadoma decyzja, nie domyślny tryb.</div>
+      </details>
+      <details>
+        <summary>Czy pieniądze przechodzą przez TracePay?<span class="plus">+</span></summary>
+        <div class="faq-body">Nigdy. Przelewy idą bezpośrednio na Twoje konto, płatności kartą i BLIK obsługuje Twój operator płatności, a raty — licencjonowany partner finansujący. My otrzymujemy wyłącznie statusy i metadane.</div>
+      </details>
+      <details>
+        <summary>Jak podłączę KSeF? Czy to skomplikowane?<span class="plus">+</span></summary>
+        <div class="faq-body">Po rejestracji tworzysz profil firmy (dane możemy pobrać z GUS) i dodajesz certyfikat KSeF według instrukcji krok po kroku z ekranami. Certyfikat służy wyłącznie do odczytu Twoich faktur sprzedażowych. Cały proces zajmuje kilkanaście minut.</div>
+      </details>
+      <details>
+        <summary>Co jeśli faktura nie ma e-maila klienta albo numeru konta?<span class="plus">+</span></summary>
+        <div class="faq-body">Taka faktura trafia do kolejki „Uzupełnij dane" — nic nie zostanie wysłane, dopóki dane nie będą kompletne. Uzupełniasz brakujące pole raz, a TracePay zapamiętuje je jako domyślne dla tego kontrahenta przy kolejnych fakturach.</div>
+      </details>
+      <details>
+        <summary>Czy mój klient musi zakładać konto?<span class="plus">+</span></summary>
+        <div class="faq-body">Nie. Klient dostaje unikalny link do strony płatności konkretnej faktury — bez logowania, bez rejestracji, bez instalowania czegokolwiek. Wszystkie opcje ma dostępne od razu.</div>
+      </details>
+      <details>
+        <summary>Skąd biorą się raty i odroczenie płatności?<span class="plus">+</span></summary>
+        <div class="faq-body">Finansowanie B2B realizuje licencjonowany partner. Klient składa wniosek u partnera, Ty otrzymujesz całość kwoty, a klient spłaca partnera w ratach. TracePay nie udziela finansowania i nie ocenia zdolności kredytowej.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA ======================= -->
+<section class="section" id="waitlist" data-screen-label="Lista oczekujących">
+  <div class="wrap">
+    <div class="cta-panel reveal">
+      <h2>Dodaj do faktury link, dzięki któremu klient zapłaci sam</h2>
+      <p>TracePay jest w fazie wczesnego dostępu. Zostaw adres e-mail — odezwiemy się, gdy otworzymy Twoją kolejkę, a&nbsp;założyciele listy dostaną specjalne warunki.</p>
+      <form class="waitlist" id="waitlist-form" action="https://api.web3forms.com/submit" method="POST">
+        <!-- TODO: wklej swój klucz z https://web3forms.com (darmowy) -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="Nowy zapis na listę oczekujących TracePay">
+        <input type="hidden" name="from_name" value="TracePay — lista oczekujących">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+        <input type="email" name="email" required="" placeholder="twoj@firmowy-email.pl" aria-label="Adres e-mail" autocomplete="email">
+        <button class="btn" type="submit">Dołącz do listy oczekujących</button>
+      </form>
+      <div class="waitlist-ok" id="waitlist-ok">✓ Dziękujemy! Jesteś na liście — odezwiemy się wkrótce.</div>
+      <div class="waitlist-err" id="waitlist-err" role="alert" style="display:none;margin-top:10px;color:var(--red);font:500 14px/1.5 var(--font-body)">Coś poszło nie tak. Spróbuj ponownie lub napisz na <a href="mailto:hej@tracepay.pl" style="color:var(--red);text-decoration:underline">hej@tracepay.pl</a>.</div>
+      <p class="cta-note">Zero spamu. Napiszemy tylko w sprawie wczesnego dostępu.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap foot-inner">
+    <a class="logo" href="#">
+      <span class="logo-mark"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7.5L5.5 11L12 3.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+      TracePay
+    </a>
+    <span>© 2026 TracePay. Faktury zapłacone, relacje nietknięte.</span>
+    <div class="foot-links">
+      <a href="#jak-dziala">Jak działa</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- Tweaks panel (React) -->
+
+
+
+
+
+<script>
+/* TracePay landing — vanilla interactions */
+(function () {
+  "use strict";
+
+  /* ---------- scroll reveal ---------- */
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealEls = document.querySelectorAll(".reveal");
+  function revealAll() {
+    revealEls.forEach(function (el) { el.classList.add("in"); });
+  }
+  if (!reduced && "IntersectionObserver" in window) {
+    var ioFired = false;
+    var io = new IntersectionObserver(function (entries) {
+      ioFired = true;
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    revealEls.forEach(function (el) { io.observe(el); });
+    // Fallback: some embedded/iframe contexts never fire IO callbacks.
+    // If nothing fired shortly after load, un-hide everything.
+    setTimeout(function () {
+      if (!ioFired) { io.disconnect(); revealAll(); }
+    }, 800);
+  } else {
+    revealAll();
+  }
+
+  /* ---------- demo: payment options -> seller feed ---------- */
+  var optButtons = document.querySelectorAll("#demo-options .payopt");
+  var feedList = document.getElementById("feed-list");
+  var placeholder = document.getElementById("feed-placeholder");
+  var responses = {
+    pay: document.getElementById("resp-pay"),
+    promise: document.getElementById("resp-promise"),
+    installments: document.getElementById("resp-installments"),
+    dispute: document.getElementById("resp-dispute")
+  };
+
+  var feedEvents = {
+    pay: {
+      title: "Klient otworzył dane do przelewu",
+      sub: "FV 2026/06/118 · oczekiwanie na wpłatę",
+      tag: "PŁATNOŚĆ", cls: "tag-ok"
+    },
+    promise: {
+      title: "Obietnica zapłaty",
+      sub: "klient zadeklarował termin — przypomnienia wstrzymane",
+      tag: "OBIETNICA", cls: "tag-warn"
+    },
+    installments: {
+      title: "Klient zainteresowany ratami",
+      sub: "przekierowano do partnera finansującego",
+      tag: "RATY", cls: "tag-info"
+    },
+    dispute: {
+      title: "Otwarto spór",
+      sub: "sekwencja przypomnień zatrzymana do wyjaśnienia",
+      tag: "SPÓR", cls: "tag-red"
+    }
+  };
+
+  var lastEventEl = null;
+
+  function todayLabel() {
+    var d = new Date();
+    var dd = String(d.getDate()).padStart(2, "0");
+    var mm = String(d.getMonth() + 1).padStart(2, "0");
+    return dd + "." + mm;
+  }
+
+  function pushFeedEvent(key, subOverride) {
+    var ev = feedEvents[key];
+    if (!ev) return;
+    if (placeholder) { placeholder.remove(); placeholder = null; }
+    if (lastEventEl) lastEventEl.remove();
+
+    var item = document.createElement("div");
+    item.className = "feed-item new";
+    item.innerHTML =
+      '<span class="t">' + todayLabel() + "</span>" +
+      "<span><b>" + ev.title + "</b><small>" + (subOverride || ev.sub) + "</small></span>" +
+      '<span class="tag ' + ev.cls + '">' + ev.tag + "</span>";
+    feedList.appendChild(item);
+    lastEventEl = item;
+  }
+
+  optButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var key = btn.getAttribute("data-opt");
+
+      optButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
+      Object.keys(responses).forEach(function (k) {
+        responses[k].classList.toggle("show", k === key);
+      });
+
+      pushFeedEvent(key);
+    });
+  });
+
+  /* promise: date chips refine the feed entry */
+  var promisePicks = document.querySelectorAll("#resp-promise .pick");
+  promisePicks.forEach(function (pick) {
+    pick.addEventListener("click", function () {
+      promisePicks.forEach(function (p) { p.classList.toggle("on", p === pick); });
+      var days = parseInt(pick.getAttribute("data-days"), 10) || 7;
+      var d = new Date();
+      d.setDate(d.getDate() + days);
+      var dd = String(d.getDate()).padStart(2, "0");
+      var mm = String(d.getMonth() + 1).padStart(2, "0");
+      pushFeedEvent("promise", "klient zadeklarował zapłatę do " + dd + "." + mm + " — przypomnienia wstrzymane");
+    });
+  });
+
+  /* dispute: send button confirms */
+  var disputeSend = document.querySelector("#resp-dispute .send");
+  if (disputeSend) {
+    disputeSend.addEventListener("click", function () {
+      var ta = document.querySelector("#resp-dispute textarea");
+      var txt = ta && ta.value.trim() ? "„" + ta.value.trim().slice(0, 60) + "”" : "opis przekazany sprzedawcy";
+      pushFeedEvent("dispute", txt + " · sekwencja zatrzymana");
+      disputeSend.textContent = "✓ Wysłano";
+      setTimeout(function () { disputeSend.textContent = "Wyślij do sprzedawcy"; }, 2200);
+    });
+  }
+
+  /* installments chip */
+  var instPick = document.querySelector("#resp-installments .pick");
+  if (instPick) {
+    instPick.addEventListener("click", function () {
+      pushFeedEvent("installments", "klient otworzył ofertę partnera finansującego");
+      instPick.textContent = "✓ Otwarto ofertę partnera";
+      setTimeout(function () { instPick.textContent = "Sprawdź ofertę partnera"; }, 2200);
+    });
+  }
+
+  /* ---------- FAQ: close others ---------- */
+  var faqItems = document.querySelectorAll(".faq details");
+  faqItems.forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      if (d.open) {
+        faqItems.forEach(function (other) { if (other !== d) other.open = false; });
+      }
+    });
+  });
+
+  /* ---------- waitlist (Web3Forms) ---------- */
+  var form = document.getElementById("waitlist-form");
+  var ok = document.getElementById("waitlist-ok");
+  if (form && ok) {
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var errEl = document.getElementById("waitlist-err");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      // honeypot — silently drop bots
+      var hp = form.querySelector('input[name="botcheck"]');
+      if (hp && hp.checked) return;
+
+      if (errEl) errEl.style.display = "none";
+      var btnLabel = submitBtn ? submitBtn.textContent : "";
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Zapisywanie…"; }
+
+      var data = new FormData(form);
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res && res.success) {
+            form.style.display = "none";
+            ok.style.display = "block";
+            if (typeof window.gtag === "function") {
+              window.gtag("event", "waitlist_signup", { method: "web3forms" });
+            }
+          } else {
+            throw new Error((res && res.message) || "submit_failed");
+          }
+        })
+        .catch(function () {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = btnLabel; }
+          if (errEl) errEl.style.display = "block";
+        });
+    });
+  }
+})();
+
+</script>
+</body>
+</html>

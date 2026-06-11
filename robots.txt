@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Blokuj typowe boty AI? Odkomentuj wybrane, jeśli nie chcesz być w treningu LLM.
+# User-agent: GPTBot
+# Disallow: /
+
+Sitemap: https://tracepay.pl/sitemap.xml
